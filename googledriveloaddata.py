@@ -10,7 +10,7 @@ Original file is located at
 # To read data directly from Google Drive rather than downloading and using it locally
 
 # To install PyDrive uncomment below line
-pip install -U -q PyDrive
+# !pip install -U -q PyDrive
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 from google.colab import auth
