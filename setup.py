@@ -32,7 +32,7 @@ here = os.path.abspath(os.path.dirname(__file__))
     # with open(os.path.join(here, 'requirements.txt'), encoding='utf-8') as f:
         # REQUIRED = f.read().split('\n')
 # except:
-    REQUIRED = []
+REQUIRED = []
 
 # What packages are optional?
 # EXTRAS = {
@@ -49,11 +49,11 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 # Load the package's __version__.py module as a dictionary.
 # about = {}
-if not VERSION:
-    with open(os.path.join(here, NAME, '__version__.py')) as f:
-        exec(f.read(), about)
-else:
-    about['__version__'] = VERSION
+# if not VERSION:
+    # with open(os.path.join(here, NAME, '__version__.py')) as f:
+        # exec(f.read(), about)
+# else:
+    # about['__version__'] = VERSION
 
 
 class UploadCommand(Command):
@@ -96,7 +96,7 @@ class UploadCommand(Command):
 # Where the magic happens:
 setup(
     name=NAME,
-    version=about['__version__'],
+    version=VERSION,
     description=DESCRIPTION,
     author=AUTHOR,
     author_email=EMAIL,
@@ -110,7 +110,6 @@ setup(
     #     'console_scripts': ['mycli=mymodule:cli'],
     # },
     install_requires=REQUIRED,
-    extras_require=EXTRAS,
     include_package_data=True,
     license='MIT',
     classifiers=[
